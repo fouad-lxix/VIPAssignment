@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">VIPAssignment</string>
+
+    <string-array name="dropdown_signup">
+        <item>Mentor</item>
+        <item>Mentee</item>
+    </string-array>
+
+    <string-array name="mentor_categories">
+        <item>Education</item>
+        <item>Entrepreneurship</item>
+        <item>Personal Growth</item>
+        <item>Career</item>
+    </string-array>
+</resources>

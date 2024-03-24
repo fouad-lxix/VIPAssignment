@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintHeight_default="wrap"
+    android:background="#def8f8"
+    tools:context=".AddMentorActivity">
+
+    <ImageView
+        android:id="@+id/circle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="-90dp"
+        android:layout_marginTop="-20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/circle2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/addmentorheader"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/back_arrow_blue"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Add New Mentor"
+        android:textSize="25sp"
+        android:textColor="#157177"
+        android:textStyle="bold"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/addmentorheader"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Help us expand!"
+        android:textSize="18sp"
+        android:textColor="#157177"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addmentorheader"
+        android:id="@+id/addmentorsubheader"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="-15dp"
+        app:layout_constraintTop_toBottomOf="@id/addmentorsubheader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/navigation_bar"
+        android:backgroundTint="#50c1c9"
+        android:elevation="0dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="50dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/uploadmentorvidbtn">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/baseline_videocam_24"
+                            android:backgroundTint="#157177"
+                            android:layout_gravity="center"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upload Video"
+                            android:textColor="#157177"
+                            android:layout_gravity="center"/>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/white"
+                    android:background="@color/white"
+                    android:id="@+id/uploadmentorpicbtn">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/baseline_camera_alt_24"
+                            android:backgroundTint="#157177"
+                            android:layout_gravity="center"
+                            android:id="@+id/mentorpicimg"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upload Photo"
+                            android:textColor="#157177"
+                            android:layout_gravity="center"
+                            android:id="@+id/mentorpictext"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            android:id="@+id/selectedmentorpic"
+                            android:scaleType="centerCrop"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="55dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Name"
+                        android:textColorHint="#8f8b8c"
+                        android:textColor="@color/black"
+                        android:background="@drawable/rounded_corner_edittext"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:paddingLeft="5dp"
+                        android:id="@+id/mentorname"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Occupation"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Occupation"
+                        android:textColorHint="#8f8b8c"
+                        android:textColor="@color/black"
+                        android:background="@drawable/rounded_corner_edittext"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:paddingLeft="5dp"
+                        android:id="@+id/mentoroccup"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Introduce Yourself"
+                        android:textColorHint="#8f8b8c"
+                        android:textColor="@color/black"
+                        android:background="@drawable/rounded_corner_edittext"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:paddingLeft="5dp"
+                        android:id="@+id/mentordesc"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rate/hr"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/rounded_corner_edittext"
+                        android:hint="Enter Rate/hr"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#8f8b8c"
+                        android:id="@+id/mentorrate"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Category"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"/>
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/rounded_corner_edittext"
+                        android:drawableEnd="@drawable/baseline_keyboard_arrow_down_24"
+                        android:hint="Enter Category"
+                        android:paddingLeft="0dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="#8f8b8c"
+                        android:entries="@array/mentor_categories"
+                        android:id="@+id/mentorcategory"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Upload"
+                        android:layout_gravity="center"
+                        android:backgroundTint="#2DA2B9"
+                        android:textColor="@color/white"
+                        android:background="@drawable/rounded_corner_edittext"
+                        android:id="@+id/creatementorbtn"/>
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/navigation_bar"
+        android:elevation="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#157177"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_home"
+                    android:id="@+id/homebtn"
+                    android:backgroundTint="#51a8a6"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Home"
+                    android:textColor="#51a8a6"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_search"
+                    android:backgroundTint="#51a8a6"
+                    android:id="@+id/searchbtn"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Search"
+                    android:textColor="#51a8a6"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_chat"
+                    android:backgroundTint="#51a8a6"
+                    android:id="@+id/chatbtn"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Chat"
+                    android:textColor="#51a8a6"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_profile"
+                    android:backgroundTint="#51a8a6"
+                    android:id="@+id/profilebtn"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#51a8a6"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/navigation_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/baseline_add_circle_24"
+        android:backgroundTint="#157177"
+        android:background="@drawable/baseline_circle_24_2"
+        android:padding="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="-40dp"
+        android:id="@+id/addbtn"
+        android:elevation="2dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

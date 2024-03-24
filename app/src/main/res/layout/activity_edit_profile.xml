@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ddf7f7">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#4dc3c8"
+            android:layout_weight="3">
+
+            <ImageButton
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@drawable/back_arrow_blue"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:textSize="30dp"
+                android:layout_gravity="center|top"
+                android:textColor="#eff3f2"
+                android:layout_marginTop="20dp"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="-40dp"
+            android:elevation="0dp"
+            android:background="@android:color/transparent"
+            app:cardCornerRadius="50dp">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/profilepic"
+                android:background="@android:color/transparent"
+                android:id="@+id/profilepic"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="-8dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Name"
+                    android:textColor="#06636c"
+                    android:textSize="20sp" />
+
+                <!-- name field -->
+                <EditText
+                    android:id="@+id/editTextName"
+                    android:layout_width="match_parent"
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/rounded_corner_edittext"
+                    android:hint="Enter Name"
+                    android:padding="15dp" />
+
+                <!-- contact text -->
+                <TextView
+                    android:id="@+id/contactText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="-8dp"
+                    android:text="Contact Number"
+                    android:textColor="#06636c"
+                    android:textSize="20sp" />
+
+                <!-- country field -->
+                <EditText
+                    android:id="@+id/editTextContact"
+                    android:layout_width="match_parent"
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/rounded_corner_edittext"
+                    android:hint="Enter Contact Number"
+                    android:padding="15dp" />
+
+                <!-- country text -->
+                <TextView
+                    android:id="@+id/countryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="-8dp"
+                    android:text="Country"
+                    android:textColor="#06636c"
+                    android:textSize="20sp" />
+
+                <!-- country field -->
+                <EditText
+                    android:id="@+id/editTextCounttry"
+                    android:layout_width="match_parent"
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_margin="16dp"
+                    android:drawableEnd="@drawable/custom_drawable"
+                    android:background="@drawable/rounded_corner_edittext"
+                    android:hint="Select Country"
+                    android:padding="15dp" />
+
+                <!-- city text -->
+                <TextView
+                    android:id="@+id/cityText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="-8dp"
+                    android:text="City"
+                    android:textColor="#06636c"
+                    android:textSize="20sp" />
+
+                <!-- city field -->
+                <EditText
+                    android:id="@+id/editTextCity"
+                    android:layout_width="match_parent"
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_margin="16dp"
+                    android:drawableEnd="@drawable/custom_drawable"
+                    android:background="@drawable/rounded_corner_edittext"
+                    android:hint="Select City"
+                    android:padding="15dp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Update Profile"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#eff3f2"
+                    android:backgroundTint="#06636c"
+                    android:background="@drawable/rounded_corner_edittext"
+                    android:id="@+id/updateprofilebtn"
+                    />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_constraintHeight_default="wrap" android:background="#def8f8" tools:context=".ChatMessageActivity">
+    <androidx.cardview.widget.CardView app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="-15dp" android:backgroundTint="#50c2c9" android:layout_width="match_parent" android:layout_height="140dp" app:cardCornerRadius="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="80dp" android:layout_marginStart="30dp" android:layout_marginEnd="20dp" android:id="@+id/homebanner">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/back_arrow_white" android:backgroundTint="#FFFFFF"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="10dp" android:layout_marginTop="-8dp" android:text="John Cooper" android:textColor="#FFFFFF" android:textStyle="bold" android:layout_weight="1" android:textSize="30sp"/>
+            <ImageView android:id="@+id/voicecallbtn" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginEnd="15dp" android:src="@drawable/phone" android:backgroundTint="#FFFFFF"/>
+            <ImageView android:id="@+id/videocallbtn" android:layout_width="25dp" android:layout_height="25dp" android:layout_marginEnd="20dp" android:src="@drawable/camera" android:backgroundTint="#FFFFFF"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" app:layout_constraintBottom_toTopOf="@id/typeBar" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_gravity="right" android:layout_marginBottom="10dp" android:layout_marginEnd="20dp">
+            <TextView android:layout_width="140dp" android:layout_height="wrap_content" android:text="Hello, You there?" android:textStyle="bold" android:gravity="center" android:background="@drawable/rounded_corner_chat" android:backgroundTint="#a2e6df"/>
+            <TextView android:layout_width="140dp" android:layout_marginTop="3dp" android:layout_height="wrap_content" android:text="10:30" android:textStyle="bold" android:layout_marginStart="-8dp" android:gravity="end" android:textSize="11sp" android:textColor="#c3d3d7"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" android:orientation="horizontal" android:layout_marginStart="20dp">
+            <ImageView android:layout_marginTop="-14dp" android:layout_width="60dp" android:layout_height="90dp" android:src="@drawable/person1"/>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_gravity="start" android:layout_marginStart="10dp">
+                <TextView android:layout_width="60dp" android:layout_height="wrap_content" android:text="Yes" android:textColor="#4e4e4e" android:textStyle="bold" android:gravity="center" android:background="@drawable/rounded_corner_chat" android:backgroundTint="#ffffff"/>
+                <TextView android:layout_width="140dp" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="10:32" android:layout_marginStart="12dp" android:textStyle="bold" android:gravity="start" android:textSize="11sp" android:textColor="#c3d3d7"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_gravity="end" android:layout_marginEnd="20dp" android:layout_marginBottom="10dp">
+            <TextView android:layout_width="160dp" android:layout_height="wrap_content" android:text="I need your guidance." android:textStyle="bold" android:gravity="center" android:background="@drawable/rounded_corner_chat" android:backgroundTint="#a2e6df"/>
+            <TextView android:layout_width="140dp" android:layout_height="wrap_content" android:text="10:30" android:layout_marginTop="3dp" android:textStyle="bold" android:layout_marginStart="10dp" android:gravity="end" android:textSize="11sp" android:textColor="#c3d3d7"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginStart="20dp">
+            <ImageView android:layout_marginTop="-14dp" android:layout_width="60dp" android:layout_height="90dp" android:src="@drawable/person1"/>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_gravity="start" android:layout_marginStart="10dp" android:layout_marginBottom="20dp">
+                <TextView android:layout_width="160dp" android:layout_height="wrap_content" android:text="How can I help you?" android:textColor="#4e4e4e" android:textStyle="bold" android:gravity="center" android:background="@drawable/rounded_corner_chat" android:backgroundTint="#ffffff"/>
+                <TextView android:layout_width="140dp" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="10:32" android:layout_marginStart="12dp" android:textStyle="bold" android:gravity="start" android:textSize="11sp" android:textColor="#c3d3d7"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <androidx.cardview.widget.CardView android:id="@+id/typeBar" android:backgroundTint="#50c2c9" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toTopOf="@id/navigation_bar" android:layout_width="match_parent" android:layout_marginBottom="10dp" android:layout_height="wrap_content" app:cardCornerRadius="20dp" android:layout_marginStart="10dp" android:layout_marginEnd="10dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="20dp" android:layout_marginBottom="50dp" android:layout_marginStart="9dp" android:layout_marginEnd="20dp">
+            <ImageButton android:layout_width="20dp" android:layout_height="30dp" android:background="@drawable/attachment" android:backgroundTint="#c0ecee"/>
+            <ImageButton android:layout_width="30dp" android:layout_height="30dp" android:layout_marginStart="2dp" android:background="@drawable/gallery" android:backgroundTint="#c0ecee"/>
+            <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@android:color/transparent" android:hint="Type something ..." android:layout_weight="1" android:layout_marginStart="10dp" android:textColorHint="#afe6e8" android:inputType="text"/>
+            <ImageButton android:id="@+id/camerabtn" android:layout_width="25dp" android:layout_height="25dp" android:background="@drawable/picture" android:backgroundTint="#c0ecee"/>
+            <ImageButton android:layout_width="25dp" android:layout_height="25dp" android:background="@drawable/mic" android:backgroundTint="#c0ecee"/>
+            <ImageButton android:layout_width="25dp" android:layout_height="25dp" android:layout_marginEnd="-4dp" android:background="@drawable/send" android:backgroundTint="#c0ecee"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <LinearLayout android:id="@+id/navigation_bar" android:layout_width="match_parent" android:layout_height="70dp" android:background="#157177" android:elevation="1dp" android:orientation="horizontal" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" android:gravity="center_vertical">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="20dp" android:layout_gravity="center_vertical">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@android:color/transparent" android:src="@drawable/custom_home_grey" android:id="@+id/homebtn" android:backgroundTint="#51a8a6"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Home" android:textColor="#51a8a6"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:layout_marginTop="4dp" android:gravity="center">
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/custom_search" android:backgroundTint="#51a8a6" android:id="@+id/searchbtn"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Search" android:textColor="#51a8a6"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="20dp" android:layout_gravity="center_vertical">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/custom_chat" android:backgroundTint="#def8f8" android:id="@+id/chatbtn"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Chat" android:textColor="#def8f8"/>
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:layout_weight="1" android:gravity="center">
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/custom_profile" android:backgroundTint="#51a8a6" android:id="@+id/profilebtn"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profile" android:layout_marginTop="5dp" android:textColor="#51a8a6"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="2dp" app:layout_constraintBottom_toTopOf="@id/navigation_bar" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" android:src="@drawable/baseline_add_circle_24" android:backgroundTint="#157177" android:background="@drawable/baseline_circle_24_2" android:padding="0dp" android:layout_marginTop="0dp" android:layout_marginBottom="-40dp" android:id="@+id/addbtn"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
